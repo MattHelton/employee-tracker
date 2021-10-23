@@ -19,11 +19,9 @@
 Team Builder uses your terminal to dynamically keep track of your team members. Just answer the prompts with the appropriate details and we'll take care of the rest.
 
 ## Technologies Used
-* HTML
-* CSS
 * JavaScript
 * Node Package Manager
-* NPM packages used: fs, inquirer, 
+* NPM packages used: MySQL, inquirer
 
 ## Installation 
 

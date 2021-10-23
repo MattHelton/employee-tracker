@@ -1,6 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const mysql = require('mysql2');
+const db = require("./db");
+require("console.table");
 
 
 // Connect to database
@@ -16,7 +18,7 @@ const db = mysql.createConnection(
   );
 
 // questions here
-const promptMenu = () => {
+function promptMenu () {
     inquirer
     .prompt([
     {
@@ -53,7 +55,40 @@ const promptMenu = () => {
                 value: "UPDATE_ROLE"
             } ]
       }
-    ]),
+    ]).then(res => {
+        let choice = res.choice;
+        switch(choice) {
+            case "VIEW_DEPARTMENTS":
+                viewDepartments()
+                break;
+            default:
+            case "VIEW_EMPLOYEES":
+                viewEmployees()
+                break;
+            default:
+            case "VIEW_ROLES":
+                viewRoles()
+                break;
+            default:
+            case "ADD_DEPARTMENT":
+                addDepartment()
+                break;
+            default:
+                case "ADD_EMPLOYEE":
+                addEmployee()
+                break;
+            default:
+            case "ADD_ROLE":
+                addRole()
+                break;
+            default:
+            case "UPDATE_ROLE":
+                updateRole()
+                break;
+            default:
+            quit();     
+          }
+    })      
 };
 
 // initialize app here
