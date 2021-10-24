@@ -2,7 +2,6 @@ INSERT INTO department (name)
 VALUES
 ('HR'),
 ('Sales'),
-('Customer Service'),
 ('Retention'),
 ('Marketing'),
 ('IT'),
@@ -12,21 +11,20 @@ VALUES
 
 INSERT INTO role (title, salary, department_id)
 VALUES
-('HR', 80000, 1),
-('Sales', 40000, 2),
-('Customer Service', 35000, 3),
-('Retention', 35000, 4),
-('Marketing', 45000, 5),
-('IT', 90000, 6),
-('Management', 120000, 7);
+('HR Specialist', 80000, 1),
+('Sales Representative', 40000, 2),
+('Retention Specialist', 35000, 3),
+('Marketing Specialist', 45000, 4),
+('Analyst', 90000, 5),
+('Management', 120000, 6);
 
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES
-  ('Jimmy', 'Jones', 1, 7),
-  ('Joshua', 'Moleander', 2, 7),
-  ('Christopher', 'Kingston', 3, 7),
-  ('Charlene', 'Williams', 4, 7),
-  ('Katherine', 'Mansfield', 5,7),
-  ('Kyle', 'Carrington', 6, 7),
-  ('Barbie', 'Bellamy', 7, null);
+('Jimmy', 'Jones', 1, 6),
+('Joshua', 'Moleander', 2, 6),
+('Christopher', 'Kingston', 3, 6),
+('Charlene', 'Williams', 4, 6),
+('Katherine', 'Mansfield', 5, 6),
+('Kyle', 'Carrington', 6, null),
+('Barbie', 'Bellamy', 6, null);
